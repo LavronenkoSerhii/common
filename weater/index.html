@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <script src="src/index.js"></script>
+
+    <div class="main">
+      <div class="search">
+        <form action="/form/submit" method="GET">
+          <input
+            type="text"
+            name="text"
+            class="search"
+            id="city"
+            placeholder="Enter the city!"
+          />
+          <input type="submit" name="submit" class="submit" value="Search" />
+        </form>
+        <button id="current">Current</button>
+      </div>
+
+      <div style="width: 100%; flex-direction: row; display: flex;">
+        <div class="city-container">
+          <div>
+            <img class="imgh1" src="src/img/sun.png" />
+            <h1></h1>
+            <span class="temperature" id="temperature"></span>
+            <span class="units">
+              <a href="#" id="cl-link" class="selector">°C</a>
+            </span>
+            <div id="general"></div>
+          </div>
+        </div>
+
+        <div class="weather-container">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">WEATHER</h5>
+              <p class="card-text">Sunday 14:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row">
+          <div class="col-3">
+            <button type="button" class="btn btn-light">Temperature</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-light">Presepitation</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-light">Wind</button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div style="flex-direction: row;">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic outlined example"
+          style="display: flex; align-items: center;"
+        >
+          <button type="button" class="btn btn-outline-primary1">
+            14:00<br /><img class="btn1" src="src/img/sun.png" /><br />27°C
+          </button>
+          <button type="button" class="btn btn-outline-primary2">
+            17:00<br /><img class="btn1" src="src/img/sun.png" /><br />26°C
+          </button>
+          <button type="button" class="btn btn-outline-primary3">
+            20:00<br /><img
+              class="btn1"
+              src="src/img/cloud_sun.png"
+            /><br />24°C
+          </button>
+          <button type="button" class="btn btn-outline-primary4">
+            23:00<br /><img class="btn1" src="src/img/cloudy.png" /><br />21°C
+          </button>
+          <button type="button" class="btn btn-outline-primary5">
+            02:00<br /><img class="btn1" src="src/img/cloudy.png" /><br />18°C
+          </button>
+          <button type="button" class="btn btn-outline-primary6">
+            05:00<br /><img class="btn1" src="src/img/cloudy.png" /><br />20°C
+          </button>
+          <button type="button" class="btn btn-outline-primary7">
+            08:00<br /><img class="btn1" src="src/img/rain.png" /><br />21°C
+          </button>
+          <button type="button" class="btn btn-outline-primary8">
+            11:00<br /><img class="btn1" src="src/img/rain.png" /><br />21°C
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
